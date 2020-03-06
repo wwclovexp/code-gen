@@ -22,6 +22,7 @@ public class DBAccess {
         try {
             Class.forName(driverClass);
             connection = DriverManager.getConnection(url,username,password);
+            System.out.println("数据库连接成功");
         } catch (ClassNotFoundException e) {
             System.out.println("找不到类：" + driverClass);
             e.printStackTrace();
